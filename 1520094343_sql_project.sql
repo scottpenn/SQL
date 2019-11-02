@@ -50,7 +50,9 @@ WHERE membercost > 0
 /* Q4: How can you retrieve the details of facilities with ID 1 and 5?
 Write the query without using the OR operator. */
 
-
+SELECT *
+FROM Facilities
+WHERE name LIKE '%2'
 
 /* Q5: How can you produce a list of facilities, with each labelled as
 'cheap' or 'expensive', depending on if their monthly maintenance cost is
