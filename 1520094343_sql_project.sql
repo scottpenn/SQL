@@ -89,8 +89,8 @@ JOIN Bookings
 	ON Members.memid = Bookings.memid
 JOIN Facilities
 	ON Bookings.facid = Facilities.facid
-WHERE Bookings.facid = 0 OR Bookings.facid = 1
-ORDER BY full_name, court_name
+	AND (Facilities.facid = 0 OR Facilities.facid = 1)
+ORDER BY full_name
 
 /* Q8: How can you produce a list of bookings on the day of 2012-09-14 which
 will cost the member (or guest) more than $30? Remember that guests have
